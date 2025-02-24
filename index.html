@@ -44,10 +44,10 @@
 
 				<fieldset>
 					<legend class="fieldset-title">Select Tip %</legend>
-					<div class="grid">
+					<div class="radio-inputs">
 						<input class="" type="radio" name="5" id="tip" />
 						<label
-							class="button radio-button"
+							class="button radio"
 							for="tip"
 							aria-label="Tip in Percentage"
 						>
@@ -56,7 +56,7 @@
 
 						<input class="" type="radio" name="10" id="tip" />
 						<label
-							class="button radio-button"
+							class="button radio"
 							for="tip"
 							aria-label="Tip in Percentage"
 						>
@@ -65,7 +65,7 @@
 
 						<input class="" type="radio" name="15" id="tip" />
 						<label
-							class="button radio-button"
+							class="button radio"
 							for="tip"
 							aria-label="Tip in Percentage"
 						>
@@ -74,7 +74,7 @@
 
 						<input class="" type="radio" name="25" id="tip" />
 						<label
-							class="button radio-button"
+							class="button radio"
 							for="tip"
 							aria-label="Tip in Percentage"
 						>
@@ -83,27 +83,29 @@
 
 						<input class="visually-hidden" type="radio" name="50" id="tip" />
 						<label
-							class="button radio-button"
+							class="button radio"
 							for="tip"
 							aria-label="Tip in Percentage"
 						>
 							<span>50%</span>
 						</label>
 
+						<input class="" type="radio" name="custom" id="tip" />
 						<label
-							class="button radio-button"
+							class="button radio"
 							for="tip"
 							aria-label="Tip in Percentage"
 						>
-							<input class="" type="radio" name="custom" id="tip" />
-							<label for="custom-input" class="visually-hidden">Custom</label>
 							<input
 								type="number"
 								name="custom-input"
 								id="custom-input"
-								placeholder="Custom"
 								aria-labelledby="custom input"
+								class="custom-input"
 							/>
+							<label for="custom-input" class="visually-hidden"
+								>Custom input</label
+							>
 						</label>
 					</div>
 				</fieldset>
@@ -130,7 +132,7 @@
 
 				<button class="button visually-hidden" type="submit">Submit</button>
 			</form>
-			<div class="results-container flow">
+			<div class="results-container">
 				<div class="split">
 					<div>
 						<p>Tip Amount</p>
@@ -138,7 +140,7 @@
 					</div>
 					<p class="fs-900 text-primary-500">$4.27</p>
 				</div>
-				<div class="flow-space-small split">
+				<div class="split">
 					<div class="">
 						<p>Total</p>
 						<p class="fs-300 text-neutral-500 margin-top">/ person</p>

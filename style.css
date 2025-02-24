@@ -24,7 +24,7 @@
 	--border-radius-large: 25px;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 43.5em) {
 	:root {
 		--fs-900: 3rem;
 	}
@@ -116,7 +116,7 @@ input[type='number'] {
 	}
 
 	input[type='radio'] {
-    display: none;
+		display: none;
 		/* border-radius: 50%; */
 	}
 }
@@ -137,15 +137,23 @@ body {
 	justify-content: center;
 }
 
-.wrapper {
-	width: min(100vw, 920px);
-	background-color: hsl(var(--clr-neutral-100));
-	border-radius: var(--border-radius-large);
-	padding-block: 2rem;
-}
-
 header {
 	align-self: center;
+	margin-bottom: 5rem;
+}
+
+.wrapper {
+	width: min(calc(100vw), 58rem);
+	margin-inline: auto;
+	padding: 3rem;
+	background-color: hsl(var(--clr-neutral-100));
+	border-radius: var(--border-radius-large);
+}
+
+@media (max-width: 40em) {
+	header {
+		margin-block: 2.5rem;
+	}
 }
 
 /* Utility classes */
@@ -165,12 +173,6 @@ header {
 	--flow-space: 1.25rem;
 }
 
-.wrapper {
-	width: min(calc(100vw - 2rem), 70rem);
-	margin: 0 auto;
-	margin-block: 2.5rem;
-}
-
 .split {
 	display: flex;
 	flex-direction: row;
@@ -185,7 +187,6 @@ header {
 	main {
 		display: flex;
 		gap: 3rem;
-		align-items: start;
 		justify-content: space-between;
 	}
 
@@ -260,10 +261,6 @@ input[type='submit'].visually-hidden:focus {
 
 /* Components */
 
-.form-container {
-	margin-inline: 2rem;
-}
-
 label,
 legend {
 	color: hsl(var(--clr-neutral-800));
@@ -292,11 +289,37 @@ legend {
 	outline: none;
 }
 
-fieldset .grid {
-	margin-block: 0.5rem;
+.radio-inputs {
+	margin-top: 0.5rem;
+	margin-bottom: 2.5rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
+}
+
+.radio-inputs .radio {
+	flex: 0 0 auto;
+	text-align: center;
+	font-size: var(--fs-600);
+	align-self: center;
+	padding: 1rem;
+}
+
+.radio:has(input.custom-input) {
+	background-color: hsl(var(--clr-neutral-200));
+	color: hsl(var(--clr-neutral-900));
+	padding-block: 0.5rem;
+}
+
+input.custom-input {
+	background-color: transparent;
+	border: transparent;
+	color: hsl(var(--clr-neutral-900));
+	text-align: right;
+}
+
+input.custom-input:focus {
+	outline: none;
 }
 
 .results-container {
@@ -305,7 +328,9 @@ fieldset .grid {
 	border-radius: var(--border-radius-small);
 	padding: 1.5rem;
 	padding-top: 2.3rem;
-	margin-inline: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
 }
 
 .button {
@@ -323,15 +348,12 @@ fieldset .grid {
 	padding: 0.5rem 2rem;
 }
 
-.radio-button {
-	/* display: inline-block; */
-}
-
 .reset-button {
 	--fg: hsl(var(--clr-neutral-900));
 	--bg: hsl(var(--clr-primary-500));
 	display: inline-block;
 	width: 100%;
+	margin-top: auto;
 }
 
 @media (min-width: 40em) {
