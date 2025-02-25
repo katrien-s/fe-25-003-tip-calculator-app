@@ -95,6 +95,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [How to Build HTML Forms Right: Semantics](https://austingil.com/how-to-build-html-forms-right-semantics/)
 - [How to Build HTML Forms Right: Accessibility](https://austingil.com/how-to-build-html-forms-right-accessibility/)
 - [How to Build HTML Forms Right: Styling](https://austingil.com/build-html-forms-right-styling/)
+- [Custom Styling Form Inputs With Modern CSS Features](https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/)
 
 ## Author
 
