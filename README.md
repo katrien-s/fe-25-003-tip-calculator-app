@@ -96,6 +96,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [How to Build HTML Forms Right: Accessibility](https://austingil.com/how-to-build-html-forms-right-accessibility/)
 - [How to Build HTML Forms Right: Styling](https://austingil.com/build-html-forms-right-styling/)
 - [Custom Styling Form Inputs With Modern CSS Features](https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/)
+- [How can I display select options as buttons?](https://stackoverflow.com/questions/52707749/how-can-i-display-select-options-as-buttons)
 
 ## Author
 

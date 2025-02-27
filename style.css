@@ -23,6 +23,8 @@
 	--border-radius-xsmall: 5px;
 	--border-radius-small: 15px;
 	--border-radius-large: 25px;
+
+	--transition: all ease-in 0.5s;
 }
 
 @media (min-width: 43.5em) {
@@ -109,19 +111,18 @@ input[type='number'] {
 		border: 1px solid;
 		vertical-align: middle;
 		transition: box-shadow 0.1s ease;
-    outline: 2px solid red;
-    z-index: 9999;
+		outline: 2px solid red;
+		z-index: 9999;
 	}
 
 	input[type='checkbox']:checked,
 	input[type='radio']:checked {
-
 		/* box-shadow: inset 0 0 0 .25em rebeccapurple; */
 	}
 
 	input[type='radio'] {
-		opacity: 0;
-		position: absolute;
+		/* opacity: 0; */
+		/* position: absolute; */
 		/* border-radius: 50%; */
 	}
 }
@@ -262,72 +263,94 @@ legend {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	/* border: 2px solid hsl(var(--clr-primary-500)); */
+	border: 2px solid hsl(var(--clr-neutral-200));
 	background-color: hsl(var(--clr-neutral-200));
-	margin-top: 0.25rem;
+	margin-top: 0.5rem;
 	padding-inline: 1rem;
 	border-radius: var(--border-radius-xsmall);
 	font-size: var(--fs-600);
+	transition: var(--transition);
 }
 
 .input-field input {
 	background-color: transparent;
 	color: hsl(var(--clr-neutral-900));
 	text-align: right;
-	border: 0px;
+	border: none;
 	padding: 0.25rem;
 }
 
-.input-field input:focus {
+input:focus {
 	outline: none;
 }
 
-.radio-inputs {
-	margin-top: 0.5rem;
+fieldset {
 	margin-bottom: 2.5rem;
+}
+
+.fieldset-title {
+	margin-bottom: 0.5rem;
+}
+
+.radio-inputs {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
-  position: relative;
+	position: relative;
 }
 
 .radio-inputs .radio {
-  flex: 0 0 auto;
 	text-align: center;
 	font-size: var(--fs-600);
 	align-self: center;
 	padding: 1rem;
+	display: inline-block;
+	text-transform: uppercase;
+	border-radius: var(--border-radius-xsmall);
+	width: 100%;
 }
 
-.radio-inputs .radio:focus {
-	/* border: 2px solid hsl(var(--clr-primary-500)); */
+.radio-inputs .radio:hover {
+	background-color: hsl(var(--clr-primary-400));
+	color: hsl(var(--clr-neutral-900));
 }
 
-input[type='radio']:focus {
-	outline: 2px solid blue; /* Or any color you prefer */
-	outline-offset: 2px;
+.radio-inputs input[type='radio']:checked + .radio {
+	--bg: hsl(var(--clr-primary-400));
+	--fg: hsl(var(--clr-neutral-900));
 }
 
-input[type='radio']:focus-visible {
-	outline: 2px solid blue;
+.input-field:has(input:focus-visible),
+.radio:focus-visible {
+	border: 2px solid hsl(var(--clr-primary-500));
 }
 
-.radio:has(input.custom-input) {
+.radio-inputs input[type='radio'] {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+}
+
+.radio-inputs input[type='radio']:focus + .radio {
+	--bg: hsl(var(--clr-primary-400)); /* Change color */
+}
+
+.radio.custom-input {
 	background-color: hsl(var(--clr-neutral-200));
 	color: hsl(var(--clr-neutral-900));
-	/* border: 2px solid hsl(var(--clr-primary-500)); */
 	padding: 0.5rem;
-}
-
-input.custom-input {
-	background-color: transparent;
-	border: transparent;
-	color: hsl(var(--clr-neutral-900));
-	text-align: center;
+	height: 100%;
+	text-align: right;
 }
 
 input.custom-input:focus {
 	outline: none;
+	border: 2px solid hsl(var(--clr-primary-500));
 }
 
 .results-container {
@@ -354,7 +377,7 @@ input.custom-input:focus {
 	border: 2px solid transparent;
 	border-radius: var(--border-radius-xsmall);
 	padding: 0.5rem 2rem;
-	transition: all ease-in 0.5s;
+	transition: var(--transition);
 }
 
 .button:hover {

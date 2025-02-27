@@ -50,83 +50,85 @@
 
 				<fieldset>
 					<legend class="fieldset-title">Select Tip %</legend>
-					<div class="radio-inputs">
-						<input class="" type="radio" name="tip" id="tip-5" value="5" />
-						<label
-							class="button radio"
-							for="tip-5"
-							aria-label="Tip in Percentage"
-						>
-							<span>5%</span>
-						</label>
+					<ul class="radio-inputs">
+						<li>
+							<label for="tip-5" aria-label="Tip in Percentage">
+								<input class="" type="radio" name="tip" id="tip-5" value="5" />
+								<span class="button radio">5%</span>
+							</label>
+						</li>
 
-						<input class="" type="radio" name="tip" id="tip-10" value="10" />
-						<label
-							class="button radio"
-							for="tip-10"
-							aria-label="Tip in Percentage"
-						>
-							<span>10%</span>
-						</label>
+						<li>
+							<label for="tip-10" aria-label="Tip in Percentage">
+								<input
+									class=""
+									type="radio"
+									name="tip"
+									id="tip-10"
+									value="10"
+								/>
+								<span class="button radio">10%</span>
+							</label>
+						</li>
 
-						<input class="" type="radio" name="tip" id="tip-15" value="15" />
-						<label
-							class="button radio"
-							for="tip-15"
-							aria-label="Tip in Percentage"
-						>
-							<span>15%</span>
-						</label>
+						<li>
+							<label for="tip-15" aria-label="Tip in Percentage">
+								<input
+									class=""
+									type="radio"
+									name="tip"
+									id="tip-15"
+									value="15"
+								/>
+								<span class="button radio">15%</span>
+							</label>
+						</li>
 
-						<input class="" type="radio" name="tip" id="tip-25" value="25" />
-						<label
-							class="button radio"
-							for="tip-25"
-							aria-label="Tip in Percentage"
-						>
-							<span>25%</span>
-						</label>
+						<li>
+							<label for="tip-25" aria-label="Tip in Percentage">
+								<input
+									class=""
+									type="radio"
+									name="tip"
+									id="tip-25"
+									value="25"
+								/>
+								<span class="button radio">25%</span>
+							</label>
+						</li>
 
-						<input
-							class="visually-hidden"
-							type="radio"
-							name="tip"
-							id="tip-50"
-							value="50"
-						/>
-						<label
-							class="button radio"
-							for="tip-50"
-							aria-label="Tip in Percentage"
-						>
-							<span>50%</span>
-						</label>
+						<li>
+							<label for="tip-50" aria-label="Tip in Percentage">
+								<input
+									type="radio"
+									name="tip"
+									id="tip-50"
+									value="50"
+								/>
+								<span class="button radio">50%</span>
+							</label>
+						</li>
 
-						<input
-							class=""
-							type="radio"
-							name="tip"
-							id="tip-custom"
-							value="custom"
-						/>
-						<label
-							class="button radio"
-							for="tip-custom"
-							aria-label="Tip in Percentage"
-						>
-							<input
-								type="number"
-								name="custom-input"
-								id="custom-input"
-								aria-labelledby="custom input"
-								class="custom-input"
-								placeholder="Custom"
-							/>
-							<label for="custom-input" class="visually-hidden"
-								>Custom input</label
-							>
-						</label>
-					</div>
+						<li>
+							<label for="tip-custom" aria-label="Tip in Percentage">
+								<input
+									class=""
+									type="radio"
+									name="tip"
+									id="tip-custom"
+									value="custom"
+								/>
+								<input
+									type="number"
+									class="custom-input button radio"
+									placeholder="Custom"
+									name="custom-input"
+									id="custom-input"
+									aria-labelledby="Custom Input"
+								/>
+							</label>
+						</li>
+					</ul>
 				</fieldset>
 
 				<label for="number-of-people" aria-label="number of people"
