@@ -98,7 +98,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 input[type='number'] {
-	-moz-appearance: textfield;
+	appearance: textfield;
 }
 
 /* general styling */
@@ -272,54 +272,68 @@ fieldset {
 	gap: 1rem;
 }
 
-.radio-inputs .radio {
+.button.radio {
+	position: relative;
 	display: inline-block;
 	text-align: center;
-	font-size: var(--fs-600);
+	font-size: clamp(var(--fs-400), 6vw, var(--fs-600));
 	padding: 1rem;
 	text-transform: uppercase;
 	border-radius: var(--border-radius-xsmall);
-	width: 100%;
 }
 
-.radio-inputs .radio:hover {
-	background-color: hsl(var(--clr-primary-400));
-	color: hsl(var(--clr-neutral-900));
-}
-
-.radio-inputs input[type='radio']:checked + .radio {
-	--bg: hsl(var(--clr-primary-400));
-	--fg: hsl(var(--clr-neutral-900));
-}
-
-.input-field:has(input:focus-visible),
-.radio:focus-visible {
-	border: 2px solid hsl(var(--clr-primary-500));
-}
-
-.radio-inputs input[type='radio'] {
+.button.radio input[type='radio'] {
+	-webkit-appearance: none;
+	appearance: none;
 	position: absolute;
-	clip: rect(0, 0, 0, 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	border: 0;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
 }
 
-.radio.custom-input {
-	background-color: hsl(var(--clr-neutral-200));
-	color: hsl(var(--clr-neutral-900));
+.button.radio .custom-input {
+	border: none;
+	background-color: transparent;
+	color: hsl(var(--clr-neutral-200));
 	padding: 0.5rem;
+	width: 100%;
 	height: 100%;
 	text-align: right;
 }
 
-.radio-inputs input[type='radio']:focus + .radio,
-.custom-input:focus {
+.button.radio:has(.custom-input) {
+	padding: 0;
+}
+
+.button.radio .custom-input::placeholder {
+	color: hsl(var(--clr-neutral-200));
+}
+
+.button.radio label {
+	color: hsl(var(--clr-neutral-100));
+}
+
+.button.radio:hover {
+	background-color: hsl(var(--clr-primary-400));
+}
+
+.button.radio:hover label,
+.button.radio:hover .custom-input::placeholder {
+	color: hsl(var(--clr-neutral-900));
+}
+
+.input-field:has(input:focus-visible),
+.button.radio:focus-visible {
+	border: 2px solid hsl(var(--clr-primary-500));
+}
+
+.button.radio input[type='radio']:focus,
+.button.radio .custom-input:focus {
 	outline: 2px solid hsl(var(--clr-primary-400));
-	outline-offset: 2px;
+	outline-offset: 4px;
+	border-radius: var(--border-radius-xsmall);
 }
 
 .results-container {
@@ -382,3 +396,5 @@ footer {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
+
+/* Test */

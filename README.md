@@ -80,7 +80,6 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
@@ -89,6 +88,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [How to Build HTML Forms Right: Styling](https://austingil.com/build-html-forms-right-styling/)
 - [Custom Styling Form Inputs With Modern CSS Features](https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/)
 - [How can I display select options as buttons?](https://stackoverflow.com/questions/52707749/how-can-i-display-select-options-as-buttons)
+- [Styling Radio Buttons As Cards | Pure CSS](https://www.youtube.com/watch?v=n2vd1LC6nvg)
 
 ## Author
 
