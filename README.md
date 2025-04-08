@@ -80,6 +80,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Custom Styling Form Inputs With Modern CSS Features](https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/)
 - [How can I display select options as buttons?](https://stackoverflow.com/questions/52707749/how-can-i-display-select-options-as-buttons)
 - [Styling Radio Buttons As Cards | Pure CSS](https://www.youtube.com/watch?v=n2vd1LC6nvg)
+- [Donate Card](https://icodethis.com/modes/design-to-code/731/submissions/337910) As I was struggling with the CSS for the `custom-input`-button, I found this exercise & solution on ICodeThis. It also made me realise I had written some unnecessary code in my fieldset. So I cleaned up that section using this code as reference.
 
 ## Author
 
