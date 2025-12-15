@@ -25,11 +25,12 @@
 			<img src="/images/logo.svg" alt="" />
 		</header>
 		<main class="wrapper flow">
+			<h1 class="visually-hidden">Tip calculator</h1>
 			<form action="" class="form-container flow">
-				<label for="bill" aria-label="total on bill"
+				<label aria-label="total on bill"
 					>Bill
 
-					<div class="input-field">
+					<span class="input-field">
 						<span>
 							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="17">
 								<path
@@ -45,7 +46,7 @@
 							placeholder="0"
 							min="0"
 						/>
-					</div>
+					</span>
 				</label>
 
 				<fieldset class="tip-selector">
@@ -135,8 +136,7 @@
 									aria-label="Custom tip percentage"
 									placeholder="Custom"
 									min="0"
-									max="100"
-									maxlength="3"
+									max="999"
 									step="1"
 									onfocus="document.getElementById('tip-custom').checked = true"
 								/>
@@ -160,8 +160,9 @@
 							type="number"
 							name="number-of-people"
 							id="number-of-people"
-							placeholder="0"
-							min="0"
+							placeholder="1"
+							min="1"
+							required
 						/>
 					</div>
 				</label>
@@ -185,7 +186,9 @@
 					</div>
 					<p class="fs-900 text-primary-500" id="total-amount">$0</p>
 				</div>
-				<button class="button reset-button" id="reset-button">Reset</button>
+				<button type="reset" class="button reset-button" id="reset-button">
+					Reset
+				</button>
 			</div>
 		</main>
 
