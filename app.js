@@ -20,21 +20,9 @@ customTipInput.addEventListener('focus', function () {
 function calculateTip() {
 	const bill = parseFloat(amountOfBill.value) || 0;
 
-	const parsedPeople = parseInt(numberOfPeople.value, 10); // parse input as base 10
+	const parsedPeople = parseInt(numberOfPeople.value, 10);
 	const people =
 		Number.isInteger(parsedPeople) && parsedPeople > 0 ? parsedPeople : 1;
-	// Use parsedPeople only if positive integer, else default to 1
-
-	// Validate inputs: must be positive numbers
-	if (isNaN(bill) || bill <= 0) {
-		alert('Please enter a valid bill amount greater than zero.');
-		return;
-	}
-
-	if (isNaN(parsedPeople) || parsedPeople <= 0) {
-		alert('Please enter a valid number of people greater than zero.');
-		return;
-	}
 
 	// Get selected tip percentage
 	let tipPercent = 0;
