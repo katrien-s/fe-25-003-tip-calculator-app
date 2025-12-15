@@ -130,6 +130,7 @@
 								<input
 									type="number"
 									class="custom-input"
+									id="custom-input"
 									name="custom-tip"
 									aria-label="Custom tip percentage"
 									placeholder="Custom"
@@ -175,16 +176,16 @@
 						<p>Tip Amount</p>
 						<p class="fs-300 text-neutral-500 margin-top">/ person</p>
 					</div>
-					<p class="fs-900 text-primary-500">$0</p>
+					<p class="fs-900 text-primary-500" id="single-tip-amount">$0</p>
 				</div>
 				<div class="split">
 					<div class="">
 						<p>Total</p>
 						<p class="fs-300 text-neutral-500 margin-top">/ person</p>
 					</div>
-					<p class="fs-900 text-primary-500">$0</p>
+					<p class="fs-900 text-primary-500" id="total-amount">$0</p>
 				</div>
-				<button class="button reset-button">Reset</button>
+				<button class="button reset-button" id="reset-button">Reset</button>
 			</div>
 		</main>
 
