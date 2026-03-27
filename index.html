@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -26,7 +26,7 @@
 		</header>
 		<main class="wrapper flow">
 			<h1 class="visually-hidden">Tip calculator</h1>
-			<form action="" class="form-container flow">
+			<form action="" id="calculator-form" class="form-container flow">
 				<label aria-label="total on bill"
 					>Bill
 
@@ -51,7 +51,7 @@
 
 				<fieldset class="tip-selector">
 					<legend class="fieldset-title">Select Tip %</legend>
-					<div class="radio-grid" role="radiogroup">
+					<div class="radio-grid">
 						<!-- Standard tip options -->
 						<div class="radio-option">
 							<input
@@ -138,16 +138,15 @@
 									min="0"
 									max="999"
 									step="1"
-									onfocus="document.getElementById('tip-custom').checked = true"
 								/>
 							</label>
 						</div>
 					</div>
 				</fieldset>
 
-				<label for="number-of-people" aria-label="number of people"
+				<label aria-label="number of people"
 					>Number of People
-					<div class="input-field">
+					<span class="input-field">
 						<span>
 							<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16">
 								<path
@@ -162,9 +161,10 @@
 							id="number-of-people"
 							placeholder="1"
 							min="1"
+              step="1"
 							required
 						/>
-					</div>
+					</span>
 				</label>
 
 				<button class="button visually-hidden" id="submit" type="submit">
@@ -177,16 +177,30 @@
 						<p>Tip Amount</p>
 						<p class="fs-300 text-neutral-500 margin-top">/ person</p>
 					</div>
-					<p class="fs-900 text-primary-500" id="single-tip-amount">$0</p>
+					<p
+						class="fs-900 text-primary-500"
+						id="single-tip-amount"
+						aria-live="polite"
+						aria-atomic="true"
+					>
+						$0
+					</p>
 				</div>
 				<div class="split">
 					<div class="">
 						<p>Total</p>
 						<p class="fs-300 text-neutral-500 margin-top">/ person</p>
 					</div>
-					<p class="fs-900 text-primary-500" id="total-amount">$0</p>
+					<p
+						class="fs-900 text-primary-500"
+						id="total-amount"
+						aria-live="polite"
+						aria-atomic="true"
+					>
+						$0
+					</p>
 				</div>
-				<button type="reset" class="button reset-button" id="reset-button">
+				<button type="reset" form="calculator-form" class="button reset-button" id="reset-button">
 					Reset
 				</button>
 			</div>
